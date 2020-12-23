@@ -10,6 +10,7 @@ import Tagline from "./Tagline";
 export default function App() {
   return (
     <div className="App">
+      <div className="container">
       <div className="weather-app">
         <div className="row">
           <div className="col-7">
@@ -29,6 +30,7 @@ export default function App() {
         <WeatherConditions />
       </div>
       <Tagline />
+      </div>
     </div>
   );
 }
