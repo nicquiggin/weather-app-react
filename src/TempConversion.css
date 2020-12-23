@@ -1,0 +1,9 @@
+.temp-conversion .active {
+  color: #1c1f1d;
+  font-weight: bold;
+}
+
+.temp.conversion .active:hover {
+  text-decoration: none;
+  cursor: default;
+}
