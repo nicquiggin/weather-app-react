@@ -1,0 +1,32 @@
+.weather-conditions h1 {
+  color: #dd2c00;
+  font-size: 42px;
+  font-weight: 900;
+  margin-left: 12px;
+  margin-top: 32px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.weather-conditions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.weather-conditions .today-weather-basic {
+  font-size: 28px;
+  margin-top: 16px;
+  text-transform: capitalize;
+}
+
+.weather-conditions .today-weather-conditions {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.weather-conditions .today-weather-icon {
+  font-size: 72px;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+.date ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todays-date {
+  font-weight: 500;
+  text-align: right;
+  margin: 0;
+}

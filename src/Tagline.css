@@ -1,0 +1,8 @@
+.tagline p {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  margin: 60px auto;
+  margin-top: 0;
+  max-width: 600px;
+  text-align: left;
+}
