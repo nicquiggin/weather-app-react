@@ -5,7 +5,7 @@ export default function Tagline() {
   return (
     <div className="tagline">
       <p>
-        <a href="https://github.com/nicquiggin/weather-app" target="_blank">
+        <a href="https://github.com/nicquiggin/weather-app" target="_blank" rel="noreferrer">
           {" "}
           Open-source code
         </a>{" "}
