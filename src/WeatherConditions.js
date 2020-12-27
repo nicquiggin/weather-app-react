@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import SearchEngine from "./SearchEngine";
+import Date from "./Date";
+import TempConversion from "./TempConversion";
+import CurrentLocation from "./CurrentLocation";
 import "./WeatherConditions.css";
 
 export default function WeatherConditions(props) {
@@ -22,7 +26,22 @@ export default function WeatherConditions(props) {
   }
   if (weatherData.loaded) {
     return (
-    <div className="weather-conditions">
+      <div className="weather-conditions">
+        <div className="row">
+            <div className="col-7">
+              <SearchEngine />
+            </div>
+            <div className="col-5">
+              <ul className="todays-date">
+                <Date />
+                <TempConversion />
+              </ul>
+            </div>
+          </div>
+          <CurrentLocation />
+
+        <hr className="top" />
+ 
       <h1>{weatherData.city}</h1>
 
       <div className="row">
