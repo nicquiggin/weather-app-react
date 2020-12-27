@@ -27,7 +27,7 @@ export default function App() {
 
         <hr className="top" />
 
-        <WeatherConditions />
+        <WeatherConditions defaultCity="Zurich"/>
       </div>
       <Tagline />
       </div>
