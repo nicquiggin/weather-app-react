@@ -1,24 +1,39 @@
 import React from "react";
 import "./Date.css";
 
-export default function Date() {
-  let date = {
-    day: "Saturday",
-    date: "21",
-    month: "November",
-    year: "2020"
-  };
-  let time = {
-    hours: "13",
-    minutes: "46"
-  };
+export default function Date(props) {
+
+
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  
+  let day = days[props.day];
+
+  let dayOfMonth = props.dayOfMonth;
+
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]  
+  
+  let month = months[props.month];
+
+  let year = props.year;
+
+  let hours = props.hours;
+  if (hours <10) {
+    hours = `0${hours}`
+  }
+
+  let minutes = props.minutes;
+  if (minutes < 10) {
+    minutes = `0${minutes}`
+  }
+
+
   return (
     <div className="date">
       <li>
-        {date.day}, {date.date} {date.month} {date.year}
+        {day}, {dayOfMonth} {month} {year}
       </li>
       <li id="time">
-        {time.hours}:{time.minutes}
+        {hours}:{minutes}
       </li>
     </div>
   );

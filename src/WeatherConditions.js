@@ -10,15 +10,16 @@ export default function WeatherConditions(props) {
   let [weatherData, setWeatherData] = useState({loaded: false})
 
   function handleResponse(response) {
-    console.log(response);
+    console.log(response.data);
     setWeatherData({
     loaded: true,
-    city: (response.data.name),
-    temperature: (response.data.main.temp),
-    description: (response.data.weather[0].description),
-    feelsLikeTemp: (response.data.main.feels_like),
-    humidity: (response.data.main.humidity),
-    wind: (response.data.wind.speed),
+    city: response.data.name,
+    date: new Date((response.data.dt) * 1000),
+    temperature: response.data.main.temp,
+    description: response.data.weather[0].description,
+    feelsLikeTemp: response.data.main.feels_like,
+    humidity: response.data.main.humidity,
+    wind: response.data.wind.speed,
     icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     unit: "°C"
     })
@@ -33,7 +34,7 @@ export default function WeatherConditions(props) {
             </div>
             <div className="col-5">
               <ul className="todays-date">
-                <Date />
+                <Date day={weatherData.date.getDay()} dayOfMonth={weatherData.date.getDate()} month={weatherData.date.getMonth()} year={weatherData.date.getFullYear()} hours={weatherData.date.getHours()} minutes={weatherData.date.getMinutes()} />
                 <TempConversion />
               </ul>
             </div>
