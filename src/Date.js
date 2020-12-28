@@ -3,38 +3,36 @@ import "./Date.css";
 
 export default function Date(props) {
 
+  return "Date not yet working"
+// let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// let day = days[props.date.getDay()];
 
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  
-  let day = days[props.day];
+// let dayOfMonth = props.date.getDate(); 
 
-  let dayOfMonth = props.dayOfMonth;
+// let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];  
+// let month = months[props.date.getMonth()]; 
 
-  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]  
-  
-  let month = months[props.month];
+// let year = props.date.getFullYear(); 
 
-  let year = props.year;
+// let hours = props.date.getHours() 
+//   if (hours <10) {
+//     hours = `0${hours}`
+//   }
 
-  let hours = props.hours;
-  if (hours <10) {
-    hours = `0${hours}`
-  }
-
-  let minutes = props.minutes;
-  if (minutes < 10) {
-    minutes = `0${minutes}`
-  }
+// let minutes = props.date.getMinutes()
+//   if (minutes < 10) {
+//     minutes = `0${minutes}`
+//   }
 
 
-  return (
-    <div className="date">
-      <li>
-        {day}, {dayOfMonth} {month} {year}
-      </li>
-      <li id="time">
-        {hours}:{minutes}
-      </li>
-    </div>
-  );
+//   return (
+//     <div className="date">
+//       <li>
+//         {day}, {dayOfMonth} {month} {year}
+//       </li>
+//       <li id="time">
+//         {hours}:{minutes}
+//       </li>
+//     </div>
+//   );
 }

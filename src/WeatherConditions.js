@@ -34,7 +34,7 @@ export default function WeatherConditions(props) {
             </div>
             <div className="col-5">
               <ul className="todays-date">
-                <Date day={weatherData.date.getDay()} dayOfMonth={weatherData.date.getDate()} month={weatherData.date.getMonth()} year={weatherData.date.getFullYear()} hours={weatherData.date.getHours()} minutes={weatherData.date.getMinutes()} />
+                <Date date={weatherData.date} />
                 <TempConversion />
               </ul>
             </div>
