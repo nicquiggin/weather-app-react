@@ -67,8 +67,6 @@ export default function WeatherConditions(props) {
         let fahrenheitFeelsLikeTemp = (props.data.feelsLikeTemp * 9) / 5 + 32;
         return (
             <div className="WeatherConditions">
-                <div className="row">
-                    <div className="col-12">
                         <ul className="todays-date">
                             <li className="temp-conversion">
                                 <a href="/" onClick={showCelsius}>°C</a>
@@ -77,9 +75,7 @@ export default function WeatherConditions(props) {
                                 °F
                             </li>
                         </ul>
-                    </div>
-                </div>
-
+                 
                 <hr className="top" />
     
                 <h1>{props.data.city}, {props.data.country}</h1>

@@ -8,10 +8,6 @@
   text-transform: capitalize;
 }
 
-.WeatherConditions hr .top {
-  margin-top: 0;
-}
-
 .WeatherConditions ul {
   list-style: none;
   padding: 0;
