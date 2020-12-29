@@ -26,10 +26,8 @@ let minutes = props.date.getMinutes()
 
   return (
     <div className="FormattedDate">
-      <li>
         {day}, {dayOfMonth} {month} {year}
-      </li>
-      <li className="time">{hours}:{minutes}</li>
+      <div className="time">{hours}:{minutes}</div>
     </div>
   );
 }

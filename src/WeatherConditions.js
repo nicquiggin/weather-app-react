@@ -1,6 +1,6 @@
 import React from "react";
+import "./WeatherConditions.css"
 import FormattedDate from "./FormattedDate";
-import TempConversion from "./TempConversion";
 import CurrentLocation from "./CurrentLocation";
 
 
@@ -10,9 +10,18 @@ export default function WeatherConditions(props) {
             <div className="row">
                 <div className="col-12">
                     <ul className="todays-date">
-                        
-                        <TempConversion />
+                        <li className="temp-conversion">
+                            <a href="/" id="select-celsius" className="active">
+                            °C
+                            </a>{" "}
+                            /{" "}
+                            <a href="/" id="select-farenheit">
+                            °F
+                            </a>
+                        </li>
+
                         <CurrentLocation />
+
                     </ul>
                 </div>
             </div>

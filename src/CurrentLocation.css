@@ -1,4 +1,5 @@
 .current-location p {
   font-weight: 600;
   text-align: right;
+  margin: 0;
 }
