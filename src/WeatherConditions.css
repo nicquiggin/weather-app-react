@@ -15,6 +15,7 @@
 .WeatherConditions ul {
   list-style: none;
   padding: 0;
+  margin-top: 12px;
 }
 
 .WeatherConditions .temp-conversion {

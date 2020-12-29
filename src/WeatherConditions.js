@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./WeatherConditions.css"
 import FormattedDate from "./FormattedDate";
-import CurrentLocation from "./CurrentLocation";
 
 
 export default function WeatherConditions(props) {
@@ -20,8 +19,6 @@ export default function WeatherConditions(props) {
     if (unit === "°C") {
         return (
             <div className="WeatherConditions">
-                <div className="row">
-                    <div className="col-12">
                         <ul className="todays-date">
                             <li className="temp-conversion">
                                 °C
@@ -31,16 +28,11 @@ export default function WeatherConditions(props) {
                                 °F
                                 </a>
                             </li>
-
-                            <CurrentLocation />
-
                         </ul>
-                    </div>
-                </div>
 
                 <hr className="top" />
     
-                <h1>{props.data.city}</h1>
+                <h1>{props.data.city}, {props.data.country}</h1>
 
                 <FormattedDate date={props.data.date} />
 
@@ -84,16 +76,13 @@ export default function WeatherConditions(props) {
                                 /{" "}
                                 °F
                             </li>
-
-                            <CurrentLocation />
-
                         </ul>
                     </div>
                 </div>
 
                 <hr className="top" />
     
-                <h1>{props.data.city}</h1>
+                <h1>{props.data.city}, {props.data.country}</h1>
 
                 <FormattedDate date={props.data.date} />
 
