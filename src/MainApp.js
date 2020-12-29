@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherConditions from "./WeatherConditions";
+import WeatherForecast from "./WeatherForecast";
 import "./MainApp.css";
 
 export default function MainApp(props) {
@@ -8,7 +9,6 @@ export default function MainApp(props) {
   let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
     loaded: true,
     city: response.data.name,
@@ -67,6 +67,7 @@ function handleCityChange(event) {
             </div>
       </div>
       <WeatherConditions data={weatherData} />
+      <WeatherForecast city={weatherData.city} />
     </div>
   )
   } else {

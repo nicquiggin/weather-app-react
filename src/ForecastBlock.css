@@ -1,0 +1,9 @@
+.ForecastBlock img {
+  display: block;
+  margin: 0 auto;
+}
+
+.ForecastBlock {
+  text-align: center;
+  margin: 12px 0px;
+}

@@ -60,6 +60,7 @@ export default function WeatherConditions(props) {
                         </ul>
                     </div>
                 </div>
+                <hr />
             </div>
         )
     } else {
@@ -106,6 +107,7 @@ export default function WeatherConditions(props) {
                         </ul>
                     </div>
                 </div>
+                <hr />
             </div>
         )
     }
