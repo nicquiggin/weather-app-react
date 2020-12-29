@@ -17,8 +17,7 @@ export default function MainApp(props) {
     feelsLikeTemp: response.data.main.feels_like,
     humidity: response.data.main.humidity,
     wind: response.data.wind.speed,
-    icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-    unit: "°C"
+    icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     })
   }
 
