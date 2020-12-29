@@ -4,10 +4,10 @@ import WeatherConditions from "./WeatherConditions";
 import "./MainApp.css";
 
 export default function MainApp(props) {
-  let [weatherData, setWeatherData] = useState({loaded: false})
+  let [weatherData, setWeatherData] = useState({loaded: false});
+  let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
     loaded: true,
     city: response.data.name,
@@ -20,15 +20,31 @@ export default function MainApp(props) {
     icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     unit: "°C"
     })
-
   }
+
+function search() {
+    let apiKey="79432bad8a08e24accbb2ab649dcc7be";
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+
+    axios.get(apiUrl).then(handleResponse)
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  search(city);
+}
+
+function handleCityChange(event) {
+  setCity(event.target.value);
+}
+
   if (weatherData.loaded) {
     return (
       <div className="MainApp">
         <div className="row">
             <div className="col-12">
               <div className="search-engine">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="input-group">
                     <input
                       type="text"
@@ -37,6 +53,7 @@ export default function MainApp(props) {
                       id="location-input"
                       autoComplete="off"
                       autoFocus="on"
+                      onChange={handleCityChange}
                     />
                     <div className="input-group-append">
                       <button className="btn btn-secondary" type="button">
@@ -52,10 +69,7 @@ export default function MainApp(props) {
     </div>
   )
   } else {
-    let apiKey="79432bad8a08e24accbb2ab649dcc7be";
-    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`
-
-    axios.get(apiUrl).then(handleResponse)
+    search(city);
     return "Loading"
   }
     
