@@ -1,8 +1,9 @@
-.btn-secondary {
+.MainApp .btn-secondary {
   background-color: #3f4441;
   border: 1px solid #3f4441;
 }
-.btn-secondary:hover {
+
+.MainApp .btn-secondary:hover {
   background-color: #1c1f1d;
   border: 1px solid #3f4441;
 }

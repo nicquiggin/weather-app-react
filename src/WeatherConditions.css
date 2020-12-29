@@ -1,4 +1,4 @@
-.weather-conditions h1 {
+.WeatherConditions h1 {
   color: #dd2c00;
   font-size: 42px;
   font-weight: 900;
@@ -8,25 +8,26 @@
   text-transform: capitalize;
 }
 
-.weather-conditions ul {
+.WeatherConditions ul {
   list-style: none;
   padding: 0;
 }
 
-.weather-conditions .today-weather-basic {
+.WeatherConditions .today-weather-basic {
   font-size: 28px;
   margin-top: 16px;
+  padding-top: 15px;
   text-transform: capitalize;
 }
 
-.weather-conditions .today-weather-conditions {
+.WeatherConditions .today-weather-conditions {
   font-size: 18px;
   font-weight: 500;
   margin-top: 16px;
   text-align: left;
 }
 
-.weather-conditions .today-weather-icon {
+.WeatherConditions .today-weather-icon {
   font-size: 72px;
   text-align: center;
 }

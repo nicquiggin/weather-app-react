@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import WeatherConditions from "./WeatherConditions";
+import MainApp from "./MainApp";
 import Tagline from "./Tagline";
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
       <div className="container">
       <div className="weather-app">
 
-        <WeatherConditions defaultCity="Zurich"/>
+        <MainApp defaultCity="London"/>
         
       </div>
       <Tagline />

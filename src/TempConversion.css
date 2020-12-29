@@ -1,9 +1,13 @@
-.temp-conversion .active {
+.TempConversion {
+  text-align: right;
+}
+
+.TempConversion .active {
   color: #1c1f1d;
   font-weight: bold;
 }
 
-.temp.conversion .active:hover {
+.TempConversion .active:hover {
   text-decoration: none;
   cursor: default;
 }

@@ -3,7 +3,7 @@ import "./TempConversion.css";
 
 export default function TempConversion() {
   return (
-    <div className="temp-conversion">
+    <div className="TempConversion">
       <li>
         <a href="/" id="select-celsius" className="active">
           °C

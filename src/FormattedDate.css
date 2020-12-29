@@ -1,10 +1,7 @@
-.date ul {
+.FormattedDate {
   list-style: none;
   padding: 0;
-}
-
-.todays-date {
   font-weight: 500;
-  text-align: right;
+  text-align: left;
   margin: 0;
 }
