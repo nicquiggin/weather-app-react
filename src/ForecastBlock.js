@@ -10,7 +10,9 @@ export default function ForecastBlock(props) {
     }
 
     let temperature = Math.round(props.data.main.temp)
-    let unit = "°C"
+    if (props.unit === "°F") {
+    temperature = Math.round((props.data.main.temp * 9) / 5 + 32);
+    }
     let icon = `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`
     let description = props.data.weather[0].description
 
@@ -18,7 +20,7 @@ export default function ForecastBlock(props) {
         <div className="ForecastBlock col">
             {hours()}
             <img src={icon} alt={description} />
-            {temperature}{unit}
+            {temperature}{props.unit}
         </div>
     )
 }

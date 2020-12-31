@@ -1,34 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import "./WeatherConditions.css"
 import FormattedDate from "./FormattedDate";
 
 
 export default function WeatherConditions(props) {
-    let [unit, setUnit] = useState("°C")
 
     function showFahrenheit(event) {
         event.preventDefault();
-        setUnit("°F")
+        props.setUnit("°F")
     }
 
     function showCelsius(event) {
         event.preventDefault();
-        setUnit("°C")
+        props.setUnit("°C")
     }
 
-    if (unit === "°C") {
+    if (props.unit === "°C") {
         return (
             <div className="WeatherConditions">
-                        <ul className="todays-date">
-                            <li className="temp-conversion">
-                                °C
-                                {" "}
-                                /{" "}
-                                <a href="/" onClick={showFahrenheit}>
-                                °F
-                                </a>
-                            </li>
-                        </ul>
+                <ul className="todays-date">
+                    <li className="temp-conversion">
+                        °C{" "}/{" "}
+                        <a href="/" onClick={showFahrenheit}>
+                        °F
+                        </a>
+                    </li>
+                </ul>
 
                 <hr className="top" />
     
@@ -44,7 +41,7 @@ export default function WeatherConditions(props) {
                         <ul>
                             <li>
                             {Math.round(props.data.temperature)}
-                            {unit}
+                            {props.unit}
                             </li>
                             <li>{props.data.description}</li>
                         </ul>
@@ -53,7 +50,7 @@ export default function WeatherConditions(props) {
                         <ul>
                             <li>
                             Feels Like: {Math.round(props.data.feelsLikeTemp)}
-                            {unit} 
+                            {props.unit} 
                             </li>
                             <li>Humidity: {props.data.humidity}%</li>
                             <li>Wind: {Math.round(props.data.wind)}km/h</li>
@@ -68,14 +65,13 @@ export default function WeatherConditions(props) {
         let fahrenheitFeelsLikeTemp = (props.data.feelsLikeTemp * 9) / 5 + 32;
         return (
             <div className="WeatherConditions">
-                        <ul className="todays-date">
-                            <li className="temp-conversion">
-                                <a href="/" onClick={showCelsius}>°C</a>
-                                {" "}
-                                /{" "}
-                                °F
-                            </li>
-                        </ul>
+                <ul className="todays-date">
+                    <li className="temp-conversion">
+                        <a href="/" onClick={showCelsius}>°C</a>
+                        {" "}/{" "}
+                        °F
+                    </li>
+                </ul>
                  
                 <hr className="top" />
     
@@ -91,7 +87,7 @@ export default function WeatherConditions(props) {
                         <ul>
                             <li>
                             {Math.round(fahrenheitTemperature)}
-                            {unit}
+                            {props.unit}
                             </li>
                             <li>{props.data.description}</li>
                         </ul>
@@ -100,7 +96,7 @@ export default function WeatherConditions(props) {
                         <ul>
                             <li>
                             Feels Like: {Math.round(fahrenheitFeelsLikeTemp)}
-                            {unit} 
+                            {props.unit} 
                             </li>
                             <li>Humidity: {props.data.humidity}%</li>
                             <li>Wind: {Math.round(props.data.wind)}km/h</li>
@@ -109,6 +105,7 @@ export default function WeatherConditions(props) {
                 </div>
                 <hr />
             </div>
+            
         )
     }
     

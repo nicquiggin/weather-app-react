@@ -7,6 +7,7 @@ import "./MainApp.css";
 export default function MainApp(props) {
   let [weatherData, setWeatherData] = useState({loaded: false});
   let [city, setCity] = useState(props.defaultCity);
+  let [unit, setUnit] = useState("°C")
 
   function handleResponse(response) {
     setWeatherData({
@@ -66,8 +67,8 @@ function handleCityChange(event) {
               </div>
             </div>
       </div>
-      <WeatherConditions data={weatherData} />
-      <WeatherForecast city={weatherData.city} />
+      <WeatherConditions data={weatherData} unit={unit} setUnit={setUnit} />
+      <WeatherForecast city={weatherData.city} unit={unit} />
     </div>
   )
   } else {
