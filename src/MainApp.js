@@ -58,7 +58,7 @@ function handleCityChange(event) {
                       onChange={handleCityChange}
                     />
                     <div className="input-group-append">
-                      <button className="btn btn-secondary" type="button">
+                      <button className="btn btn-secondary" type="button" onClick={handleSubmit}>
                         <i className="fa fa-search"></i>
                       </button>
                     </div>
